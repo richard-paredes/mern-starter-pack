@@ -10,6 +10,7 @@
     "client": "npm start --prefix ./client",
     "client-install": "cd ./client && npm install",
     "server-install": "npm install",
+    "install-dependencies": "npm run server-install && npm run client-install",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "Richard Paredes",
