@@ -4,20 +4,20 @@
   "description": "Basic boilerplate for MongoDB, Express, React, and Node web apps.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "client": "npm start --prefix ../client",
-    "client-install": "cd ../client && npm install",
+    "start": "node server",
+    "stop": "killall node",
+    "server": "cd ./server && nodemon index.js",
+    "client": "npm start --prefix ./client",
+    "client-install": "cd ./client && npm install",
     "server-install": "npm install",
-    "install-dependencies": "concurrently \"npm run client-install\" \"npm run server-install\" ",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "Richard Paredes",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^4.1.1",
-    "dotenv": "^8.0.0",
+    "concurrently": "^4.1.2",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "mongoose": "^5.6.9"
+    "mongoose": "^5.6.13"
   }
 }
